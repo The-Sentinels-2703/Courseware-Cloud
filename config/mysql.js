@@ -13,6 +13,7 @@ export const connectMySQL = async () => {
     await sequelize.authenticate();
     await sequelize.sync(); 
   } catch (error) {
+    throw error;
   }
 };
 
